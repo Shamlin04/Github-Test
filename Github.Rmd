@@ -1,0 +1,44 @@
+---
+title: "Test Run for Github"
+author: "Sierra Hamlin"
+date: "2025-10-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a test for Github
+
+```{r}
+t <- seq(0, 2*pi, 0.001)
+
+x <- 16 * sin(t)^3
+y <- 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+
+plot(x, y, type = "l", col = "deeppink", lwd = 3,
+     xlab = "", ylab = "", asp = 1, axes = FALSE)
+polygon(x, y, col = "pink", border = "deeppink", lwd = 2)
+
+```
+
+```{r}
+t <- seq(0, 2*pi, length.out = 500)
+x1 <- cos(t)
+y1 <- sin(t)
+
+x2 <- 0.6 + 0.8*cos(t)
+y2 <- 0.8*sin(t)
+
+plot(x1, y1, type = "n", asp = 1, axes = FALSE)
+polygon(x1, y1, col = "gold", border = NA)
+polygon(x2, y2, col = "white", border = NA)
+title("Crescent Moon")
+```
+
+
+
+
+
+
